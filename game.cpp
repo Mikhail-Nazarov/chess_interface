@@ -72,7 +72,8 @@ void Game::addCoords()
         text->setZValue(1);
         text->setDefaultTextColor(Qt::white);
         text->setFont(QFont("",10));
-        text->setPlainText(letters[i]);
+        const QString &s = QString(letters[i]);
+        text->setPlainText(s);
         text->setPos((width()/2-300)+i*shift,50);
         addToScene(text);
     }
